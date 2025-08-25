@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Obra em Realidade Aumentada</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.0/aframe/build/aframe-ar.js"></script>
+    <style>
+      body { margin: 0; overflow: hidden; }
+    </style>
+  </head>
+  <body>
+    <a-scene embedded arjs>
+      <!-- Marcador personalizado -->
+      <a-marker type="pattern" url="marker.patt">
+        <!-- Modelo 3D -->
+        <a-entity 
+          gltf-model="modelo.glb" 
+          scale="0.1 0.1 0.1" 
+          rotation="0 0 0"
+          position="0 0 0">
+        </a-entity>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
